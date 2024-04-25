@@ -29,8 +29,7 @@ Recursion (Optional):
 
 - While not strictly necessary, understanding recursion can provide an alternative approach to generating Pascal’s Triangle.
 Recognize base cases and recursive cases for a function that generates the triangle’s rows.
-
-- Arithmetic Operations:
+# Arithmetic Operations:
 
 Perform addition, a fundamental operation for calculating each element of Pascal’s Triangle as the sum of the two elements directly above it.
 Indexing and Slicing:
