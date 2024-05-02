@@ -27,3 +27,6 @@ def canUnlockAll(boxes):
                 boxes_to_check.append(boxes[key])
 
     return len(unlocked_boxes) == len(boxes)
+
+if __name__ == "__main__:
+    canUnlockAll(boxes)
