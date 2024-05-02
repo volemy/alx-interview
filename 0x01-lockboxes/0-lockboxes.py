@@ -7,14 +7,11 @@ This module contains a method that determines if all boxes can be opened
 def canUnlockAll(boxes):
     """
     Determines if all the boxes can be opened.
-
-    :param boxes: A list of lists representing the boxes
-    :return: True if all boxes can be opened, else return False
+    returns True if all boxes can be opened, else return False
     """
     if not boxes:
         return False
 
-    # Start with the first box unlocked
     unlocked_boxes = [0]
     boxes_to_check = [box for box in boxes if box]
 
@@ -27,6 +24,3 @@ def canUnlockAll(boxes):
                 boxes_to_check.append(boxes[key])
 
     return len(unlocked_boxes) == len(boxes)
-
-if __name__ == "__main__:
-    canUnlockAll(boxes)
