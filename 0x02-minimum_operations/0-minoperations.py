@@ -15,20 +15,17 @@ def minOperations(n):
     Returns:
     int: The minimum number of operations needed. If n is impossible to achieve, return 0.
     """
-    if n < 1:
+    if n < 2:
         return 0
 
     operations = 0
-    current_chars = 1  # Initialize with 1 H character
+    current_chars = 2
 
-    while current_chars < n:
+    while n > 1:
         # If current_chars is a factor of n, we can reach n by copying and pasting
         if n % current_chars == 0:
-            operations += 1
-            current_chars *= 2
-        else:
-            # Otherwise, we need to add the remaining characters one by one
-            operations += n - current_chars
-            break
+            operations += current_chars
+            n //= current_chars
+            current_chars += 1
 
     return operations
