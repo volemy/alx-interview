@@ -5,33 +5,28 @@ operations in file: Copy, All and Paste.
 """
 
 
-def min_operations(n):
+def minOperations(n):
     """
-    Determine the minimum number of operations
-    needed to result in exactly n 'H' characters.
-
-    Parameters:
-    n (int): The target number of 'H' characters.
-
+    Calculate the fewest number of operations needed to result in exactly n
+    H characters in the file.
     Returns:
-    int: The minimum number of operations required,
-    or 0 if n cannot be achieved.
+    int: The minimum number of operations needed. If n is impossible to achieve
+    return 0.
     """
-    if n < 2:
+    if n < 1:
         return 0
 
     operations = 0
-    factor = 2
+    current_chars = 1
 
-    while n > 1:
-        while n % factor == 0:
-            operations += factor
-            n //= factor
-        factor += 1
+    while current_chars < n:
+        # If current_chars is a factor of n, we can reach n by copying and pasting
+        if n % current_chars == 0:
+            operations += 1
+            current_chars *= 2
+        else:
+            # Otherwise, we need to add the remaining characters one by one
+            operations += n - current_chars
+            break
 
     return operations
-
-
-if __name__ == "__main__":
-    print("Min # of operations to reach {} char: {}".format(4, min_operations(4)))
-    print("Min # of operations to reach {} char: {}".format(12, min_operations(12)))
