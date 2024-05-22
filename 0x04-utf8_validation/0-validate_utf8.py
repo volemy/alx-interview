@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Task 0 For UTF-8 Validation"""
 
+
 def validUTF8(data):
-    """Determining the data set
-    is a valid utf-8 encoding
+    """Determining
+    a valid utf-8 encoding set
     """
     number_bytes = 0
 
