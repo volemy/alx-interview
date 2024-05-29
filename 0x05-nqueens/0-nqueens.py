@@ -54,7 +54,7 @@ def unsafe_position(
 def print_board(board, n):
     """
     It takes a board and an n, and returns a list of the
-    coordinates of the queens on the board
+    coordinates of the queens on the board.
 
     :param board: a list of integers, where each integer
     represents the column of the queen in that row
