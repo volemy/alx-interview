@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-""" N queens Interview Question """
+""" N queens 00 """
 
 import sys
 
 
 def get_size():
     """
-    Get the size of the board.
+    Getting board size.
     """
     arguments = sys.argv
     if len(arguments) != 2:
@@ -31,17 +31,7 @@ def unsafe_position(
         current) -> bool:
     """
     If the queen is in the same column, or in the same diagonal,
-    as any other queen, then it's unsafe
-
-    :param board: the current board
-    :type board: List[List[str]]
-    :param row: the row we're currently on
-    :type row: int
-    :param col: the column we're currently trying to place a queen in
-    :type col: int
-    :param current: the current row we are on
-    :type current: int
-    :return: True or False
+    as any other queen, then it is not unsafe.
     """
 
     if (board[row] == col) or \
@@ -54,11 +44,7 @@ def unsafe_position(
 def print_board(board, n):
     """
     It takes a board and an n, and returns a list of the
-    coordinates of the queens on the board.
-
-    :param board: a list of integers, where each integer
-    represents the column of the queen in that row
-    :param n: the number of queens,
+    coordinates.
     """
 
     result = []
@@ -72,11 +58,7 @@ def print_board(board, n):
 
 def fill_positions(board, row,  n):
     """
-    For each row, try each column, and if it's safe, recurse on the next row
-
-    :param board: the chess board
-    :param row: the row we are currently on
-    :param n: the size of the board
+    For each row, try each column, and if it's safe, recurse on the next row.
     """
 
     if row == n:
