@@ -58,7 +58,7 @@ def print_board(board, n):
 
     :param board: a list of integers, where each integer
     represents the column of the queen in that row
-    :param n: the number of queens
+    :param n: the number of queens,
     """
 
     result = []
@@ -74,7 +74,7 @@ def fill_positions(board, row,  n):
     """
     For each row, try each column, and if it's safe, recurse on the next row
 
-    :param board: the chess board.
+    :param board: the chess board
     :param row: the row we are currently on
     :param n: the size of the board
     """
