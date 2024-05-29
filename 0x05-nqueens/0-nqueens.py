@@ -74,7 +74,7 @@ def fill_positions(board, row,  n):
     """
     For each row, try each column, and if it's safe, recurse on the next row
 
-    :param board: the chess board
+    :param board: the chess board.
     :param row: the row we are currently on
     :param n: the size of the board
     """
